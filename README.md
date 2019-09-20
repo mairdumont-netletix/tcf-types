@@ -1,3 +1,6 @@
+[![NPM version](https://img.shields.io/npm/v/@mdnx/tcf-types.svg?style=flat-square)](https://www.npmjs.com/package/@mdnx/tcf-types)
+[![npm module downloads per month](http://img.shields.io/npm/dm/@mdnx/tcf-types.svg?style=flat)](https://www.npmjs.org/package/@mdnx/tcf-types)
+
 # Consent Management Platform TCFv2 Types
 
 This package provides TCFv2 Typescript Types specified in the

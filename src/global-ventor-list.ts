@@ -124,7 +124,7 @@ export interface VendorInfo {
    */
   overflow?: {
     // 32 or 128 are supported options
-    httpGetLimit: number;
+    httpGetLimit: 32 | 128;
   }
 }
 

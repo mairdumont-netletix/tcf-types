@@ -1,6 +1,6 @@
 {
   "name": "@mdnx/tcf-types",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "IAB's Transparency & Consent Framework types in TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,7 +12,7 @@
   "author": "Denny Bartelt <d.bartelt@mairdumont-netletix.com>",
   "license": "MIT",
   "repository": {
-    "type" : "git",
+    "type": "git",
     "url": "https://github.com/mairdumont-netletix/tcf-types"
   },
   "bugs": {

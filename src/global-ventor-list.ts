@@ -113,7 +113,7 @@ export interface VendorInfo {
    * If present, vendor is considered deleted after this date/time
    * and MUST NOT be established to users.
    */
-  deletedDate: DateString;
+  deletedDate?: DateString;
 
   /**
    * object specifying the vendor's http GET request length limit, OPTIONAL.

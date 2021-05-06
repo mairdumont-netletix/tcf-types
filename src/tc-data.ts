@@ -1,3 +1,4 @@
+import { CmpStatus } from "./cmp-status";
 import { EventStatus } from "./event-status";
 
 /**
@@ -44,6 +45,19 @@ export interface TCData {
    */
   eventStatus: EventStatus;
 
+  /**
+   * see Ping Status Codes in following table
+   */
+  cmpStatus: CmpStatus;
+
+  /**
+   * If this TCData is sent to the callback of addEventListener: number,
+   * the unique ID assigned by the CMP to the listener function registered
+   * via addEventListener.
+   * Others: undefined.
+   */
+  listenerId?: number;
+
   /*
    * true - if using a service-specific or publisher-specific TC String,
    * false - if using a global TC String
@@ -84,16 +98,16 @@ export interface TCData {
     allowedVendors: {
       /**
        * true - Vendor is allowed to use and Out-of-Band Legal Basis,
-       * false - Vendor is NOT allowed to use an Out-of-Band Legal Basis
+       * false | undefined - Vendor is NOT allowed to use an Out-of-Band Legal Basis
        */
       [vendorId: number]: boolean;
     },
     discloseVendors: {
       /**
        * true - Vendor has been disclosed to the user,
-       * false - Vendor has been disclosed to the user
+       * false | undefined - Vendor has not been disclosed to the user
        */
-      [vendorId: number]: boolean;
+      [vendorId: number]: boolean | undefined;
     }
   },
   purpose: {
@@ -102,7 +116,7 @@ export interface TCData {
        * true - Consent
        * false - No Consent.
        */
-      [purposeId: number]: boolean;
+      [purposeId: number]: boolean | undefined;
     },
     legitimateInterests: {
       /**

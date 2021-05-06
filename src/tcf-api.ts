@@ -57,7 +57,8 @@ export interface TCFAPI {
     command: 'removeEventListener',
     version: 2,
     callback: (success: boolean) => void,
-    callback2: (tcData: TCData, success: boolean) => void,
+    // the unique ID assigned by the CMP to the registered callback (via addEventListener)
+    listenerId: number,
   ): void;
 }
 

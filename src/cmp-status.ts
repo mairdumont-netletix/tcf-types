@@ -5,6 +5,8 @@ export enum CmpStatus {
   STUB = 'stub',
   /**
    * CMP is loading
+   *
+   * @deprecated this status is not distinct and will be removed in a future version
    */
   LOADING = 'loading',
   /**
@@ -19,4 +21,16 @@ export enum CmpStatus {
    * to perform the operations in compliance with the TCF.
    */
   ERROR = 'error',
+  /**
+   * User interface is currently displayed
+   */
+  VISIBLE = 'visible',
+  /**
+   * User interface is not yet or no longer displayed
+   */
+  HIDDEN = 'hidden',
+  /**
+   * User interface will not show (e.g. GDPR does not apply or TC data is current and does not need renewal)
+   */
+  DISABLED = 'disabled',
 }
